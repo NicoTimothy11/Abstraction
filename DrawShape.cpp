@@ -3,26 +3,38 @@
 
 using namespace std;
 
-class Base {
+class Shape {
 public:
-	virtual void show() {
-		cout << "Virtual func" << endl;
+	virtual void Draw() = 0;
+};
+
+class Square : public Shape {
+public:
+	void Draw() override {
+		cout << "Square Created" << endl;
 	}
 };
 
-class Derived : public Base {
+class Triangle : public Shape {
 public:
-	void show() override {
-		cout << "Derived class function" << endl;
+	void Draw() override {
+		cout << "Triangle Created" << endl;
+	}
+};
+
+class Circle : public Shape {
+public:
+	void Draw() override {
+		cout << "Circle Created" << endl;
 	}
 };
 
 int main() {
-	Base *basePtr;
-	Derived derObj;
+	Shape *ShapePtr;
+	Square SqObj;
 
-	basePtr = &derObj;
+	ShapePtr = &SqObj;
 
-	basePtr -> show();
+	ShapePtr -> Draw();
 	return 0;
 }
