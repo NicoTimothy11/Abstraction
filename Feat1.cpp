@@ -1,8 +1,9 @@
-#include <iostream>
-#include <string>
-
-using namespace std;
 
 int main() {
+	Shape *ShapePtr;
+	Circle CirObj;
 
-}
+	ShapePtr = &CirObj;
+
+	ShapePtr -> Draw();
+	return 0;
