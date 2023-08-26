@@ -1,3 +1,4 @@
+
 int main() {
 	Shape *ShapePtr;
 	Circle CirObj;
@@ -6,4 +7,3 @@ int main() {
 
 	ShapePtr -> Draw();
 	return 0;
-}
