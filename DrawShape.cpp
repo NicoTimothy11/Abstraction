@@ -31,10 +31,16 @@ public:
 
 int main() {
 	Shape *ShapePtr;
+	Shape *ShapePtr2;
+
 	Square SqObj;
+	Triangle TrObj;
 
 	ShapePtr = &SqObj;
+	ShapePtr2 = &TrObj;
 
 	ShapePtr -> Draw();
+	ShapePtr2 -> Draw();
 	return 0;
 }
+
