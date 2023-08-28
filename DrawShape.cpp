@@ -5,7 +5,9 @@ using namespace std;
 
 class Shape {
 public:
-	virtual void Draw() = 0;
+	virtual void Draw() {
+		cout << "Drawing a shape" << endl;
+	}
 };
 
 class Square : public Shape {
@@ -41,6 +43,15 @@ int main() {
 
 	ShapePtr -> Draw();
 	ShapePtr2 -> Draw();
+
+	Shape* shape1 = new Triangle();
+	Shape* shape2 = new Circle();
+
+	shape1 -> Draw();
+	shape2 -> Draw();
+
+	delete shape1;
+	delete shape2;
 	return 0;
 }
 
